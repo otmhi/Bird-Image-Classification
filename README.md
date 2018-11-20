@@ -16,12 +16,19 @@ pip install -r requirements.txt
 We will be using a dataset containing 200 different classes of birds adapted from the [CUB-200-2011 dataset](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html).
 Download the training/validation/test images from [here](https://www.di.ens.fr/willow/teaching/recvis18/assignment3/bird_dataset.zip). The test image labels are not provided.
 
-#### Training and validating your model
-Run the script `main.py` to train your model.
+### Preprocessing 
+Before beginning any training, run the following command :
+```bash
+python preprocess.py
+```
+This will create the cropped images of birds with YOLO v3 to help the models learn better. Once this is done, you can run the `main.py` script to train and validate your model .
 
-Modify `main.py`, `model.py` and `data.py` for your assignment, with an aim to make the validation score better.
+#### Final Training 
 
-- By default the images are loaded and resized to 64x64 pixels and normalized to zero-mean and standard deviation of 1. See data.py for the `data_transforms`.
+Once you're happy with your model, you can retrain your model on all the samples ( train and validation dataset ) using the :
+```bash
+python final_train.py
+```
 
 #### Evaluating your model on the test set
 
@@ -31,6 +38,9 @@ You can take one of the checkpoints and run:
 ```
 python evaluate.py --data [data_dir] --model [model_file]
 ```
+
+To reproduce the performances on the leaderboard, you should run the final_train.py script with --epochs 40.
+and then take the `model_40.pth`and run the evaluate.py script.
 
 That generates a file `kaggle.csv` that you can upload to the private kaggle competition website.
 
