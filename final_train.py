@@ -26,12 +26,11 @@ parser.add_argument('--log-interval', type=int, default=10, metavar='N',
                     help='how many batches to wait before logging training status')
 parser.add_argument('--experiment', type=str, default='experiment', metavar='E',
                     help='folder where experiment outputs are located.')
-parser.add_argument('--n_mixtures', type=int, default=2, metavar='X')
 
 args = parser.parse_args()
 use_cuda = torch.cuda.is_available()
 torch.manual_seed(args.seed)
-
+print(args.data)
 # Create experiment folder
 if not os.path.isdir(args.experiment):
     os.makedirs(args.experiment)
@@ -39,13 +38,15 @@ if not os.path.isdir(args.experiment):
 # Data initialization and loading
 from data import data_transforms
 
-if not os.path.isdir(opt.data):
+if not os.path.isdir(args.data):
     print('creating the final train dataset')
-    os.system('mkdir '+opt.data)
+    os.makedirs(args.data)
+    os.system('cp -r bird_dataset/train_images/* '+args.data)
+    os.system('cp -r bird_dataset/val_images/* '+args.data)
     
 
 train_loader = torch.utils.data.DataLoader(
-    datasets.ImageFolder(opt.data,
+    datasets.ImageFolder(args.data,
                          transform=data_transforms['train']),
     batch_size=args.batch_size, shuffle=True, num_workers=1)
 
