@@ -41,8 +41,8 @@ from data import data_transforms
 if not os.path.isdir(args.data):
     print('creating the final train dataset')
     os.makedirs(args.data)
-    os.system('cp -r bird_dataset/train_images/* '+args.data)
-    os.system('cp -r bird_dataset/val_images/* '+args.data)
+    os.system('cp -r cropped_bird_dataset/train_images/* '+args.data)
+    os.system('cp -r cropped_bird_dataset/val_images/* '+args.data)
     
 
 train_loader = torch.utils.data.DataLoader(
