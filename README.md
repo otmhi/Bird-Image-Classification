@@ -21,7 +21,7 @@ Before beginning any training, run the following command :
 ```bash
 python preprocess.py
 ```
-This will create the cropped images of birds with YOLO v3 to help the models learn better. Once this is done, you can run the `main.py` script to train and validate your model .
+This will create the cropped images of birds with [YOLO v3](https://github.com/eriklindernoren/PyTorch-YOLOv3) to help the models learn better. Once this is done, you can run the `main.py` script to train and validate your model .
 
 #### Final Training 
 
@@ -46,3 +46,6 @@ That generates a file `kaggle.csv` that you can upload to the private kaggle com
 
 #### Acknowledgments
 Adapted from Rob Fergus and Soumith Chintala https://github.com/soumith/traffic-sign-detection-homework.
+This solution is a part of the 3rd assignment for Object recognition and computer vision 2018/2019 MVA Class [Jean Ponce](https://www.di.ens.fr/~ponce/), [Ivan Laptev](https://www.di.ens.fr/~laptev/), [Cordelia Schmid](http://lear.inrialpes.fr/~schmid/) and [Josef Sivic](https://www.di.ens.fr/~josef/), adapted from https://github.com/willowsierra/recvis18_a3. 
+link to the class : https://www.di.ens.fr/willow/teaching/recvis18/
+
