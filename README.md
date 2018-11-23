@@ -3,6 +3,8 @@
 
 ### Assignment 3: Image classification 
 
+Link to the Inclass [Competition](https://www.kaggle.com/c/mva-recvis-2018)
+
 #### Requirements
 1. Install PyTorch from http://pytorch.org
 
@@ -39,7 +41,7 @@ You can take one of the checkpoints and run:
 python evaluate.py --data [data_dir] --model [model_file]
 ```
 
-To reproduce the performances on the leaderboard, you should run the final_train.py script with --epochs 40.
+To reproduce the performances on the leaderboard (11th), you should run the final_train.py script with --epochs 40.
 and then take the `model_40.pth`and run the evaluate.py script.
 
 That generates a file `kaggle.csv` that you can upload to the private kaggle competition website.
