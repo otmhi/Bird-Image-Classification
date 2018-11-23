@@ -45,7 +45,7 @@ and then take the `model_40.pth`and run the evaluate.py script.
 That generates a file `kaggle.csv` that you can upload to the private kaggle competition website.
 
 #### Acknowledgments
-Adapted from Rob Fergus and Soumith Chintala https://github.com/soumith/traffic-sign-detection-homework.
-This solution is a part of the 3rd assignment for Object recognition and computer vision 2018/2019 MVA Class [Jean Ponce](https://www.di.ens.fr/~ponce/), [Ivan Laptev](https://www.di.ens.fr/~laptev/), [Cordelia Schmid](http://lear.inrialpes.fr/~schmid/) and [Josef Sivic](https://www.di.ens.fr/~josef/), adapted from https://github.com/willowsierra/recvis18_a3. 
+Adapted from Rob Fergus and Soumith Chintala https://github.com/soumith/traffic-sign-detection-homework.\\
+This solution is a part of the 3rd assignment for Object recognition and computer vision 2018/2019 MVA Class [Jean Ponce](https://www.di.ens.fr/~ponce/), [Ivan Laptev](https://www.di.ens.fr/~laptev/), [Cordelia Schmid](http://lear.inrialpes.fr/~schmid/) and [Josef Sivic](https://www.di.ens.fr/~josef/), adapted from https://github.com/willowsierra/recvis18_a3. \\
 link to the class : https://www.di.ens.fr/willow/teaching/recvis18/
 
